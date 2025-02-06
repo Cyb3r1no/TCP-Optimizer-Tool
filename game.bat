@@ -1,6 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
 
+:: Set Powershell Execution Policy to Unrestricted
+powershell "Set-ExecutionPolicy Unrestricted"
+
 :: Check for Administrator privileges
 NET FILE 1>NUL 2>NUL
 if '%errorlevel%' == '0' (
